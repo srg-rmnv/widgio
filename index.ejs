@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>
+            <%= htmlWebpackPlugin.options.title %>
+        </title>
+    </head>
+
+    <body>
+        <section class="login-screen">
+            <div class="login-screen__left">
+                <a href="#" class="logo"></a>
+            </div>
+            <div class="login-screen__right">
+                <div class="sign-in">
+                    <h2>Sign in to your account</h2>
+                    <form id="login">
+                        <input type="email" name="userEmail" placeholder="Email">
+                        <input type="password" name="userPassword" placeholder="Password">
+                        <div class="login-form__submit">
+                            <button type="submit" form="login" value="Submit">Sign in</button>
+                            <a href="#" class="form-link__right">Forgot password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="social-login">
+                    <h3 class="social-login__text">Or connect with</h3>
+                    <div class="social-login__buttons">
+                        <button><span class="icon icon-fb"></span> Facebook</button>
+                        <button><span class="icon icon-google"></span> Google</button>
+                    </div>
+                </div>
+                <div class="new-user">
+                    New user? <a href="#" class="form-link__left">Create an account</a>
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>

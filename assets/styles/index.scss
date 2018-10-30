@@ -1,0 +1,190 @@
+// Apply a natural box layout model to all elements
+// but allowing components to change
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+@import 'font';
+@import 'variables';
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: $font;
+    color: $black-color;
+}
+
+body {
+
+    display: flex;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: $accent-color;
+}
+
+h2 {
+    font-size: 1.4em;
+    letter-spacing: 0.01em;
+    margin-bottom: 1.2em;
+}
+
+input {
+    width: 366px;
+    height: 40px;
+    padding: 10px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #dfe5ed;
+    border-radius: 4px;
+    font-size: 14px;
+    display: block;
+
+    &:focus {
+        outline: none;
+        border-color: $accent-color;
+    }
+
+    &::placeholder {
+        color: #959fb0;
+    }
+
+    margin-bottom: 12px;
+}
+
+button {
+    cursor: pointer;
+    color: $black-color;
+    display: inline-block;
+    background-color: #fff;
+    border-color: #d3d9e0;
+    padding: 8px 20px;
+    font-size: 14px;
+    line-height: 22px;
+    border-radius: 4px;
+}
+
+.login-form__submit {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 19px;
+
+    a {
+        font-size: 0.82em;
+    }
+
+    button {
+        border-color: $accent-color;
+        color: $accent-color;
+        padding: 8px 65px;
+
+    }
+}
+
+.form-link__right {
+    align-self: center;
+}
+
+.logo {
+    display: block;
+    background: url('/assets/images/logo.png') no-repeat center;
+    height: 186px;
+    width: 160px;
+    margin: 20px 0;
+}
+
+.login-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    flex: 1 1 100%;
+    position: relative;
+
+    @include md {
+        justify-content: center;
+        flex-direction: row;
+        &__left{
+            position: relative;
+                &:after{
+                content:'';
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 1px;
+                background-color: #eff2f6;
+            }
+        }
+    }
+
+    & > * {
+        padding: 0;
+        flex: 0 1 auto;
+
+        @include md {
+            flex-shrink: 0;
+            padding: 80px;
+        }
+
+        align-self: center;
+    }
+}
+
+.social-login {
+    button {
+        padding: 8px 42px;
+        color: $black-color;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            flex-basis: 48%;
+        }
+    }
+}
+
+.social-login__text {
+    font-size: 0.81em;
+    font-weight: normal;
+    margin-top: 2.1em;
+    margin-bottom: 0.5em;
+}
+
+.icon {
+    vertical-align: text-top;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-fb {
+    background-image: url('/assets/images/fb_icon.svg');
+}
+
+.icon-google {
+    background-image: url('/assets/images/google_icon.svg');
+}
+
+.new-user {
+    margin-top: 27px;
+    font-size: 0.82em;
+    margin-bottom: 2em;
+}
