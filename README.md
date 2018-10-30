@@ -1,19 +1,17 @@
-
-## Setup
+## Preview is hosted [here](http://widgio.oneeleven.work/dist/)
+### Setup
 Install dependencies
 ```sh
 $ npm install
 ```
 
-## Development
+### Development
 Run the local webpack-dev-server with livereload and autocompile on [http://localhost:8080/](http://localhost:8080/)
 ```sh
 $ npm run dev
 ```
-## Deployment
+### Deployment
 Build the current application
 ```sh
 $ npm run build
 ```
-
-## If you only want to see compiled page download the /dist folder and unzip it
